@@ -18,7 +18,7 @@ Example:
 
     {
         "require": {
-            "basilicom-pimcore-plugin/computervision": ">=1.0.0"
+            "basilicom-pimcore-plugin/computer-vision": ">=1.0.0"
         }
     }
 
