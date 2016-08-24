@@ -1,2 +1,0 @@
-
-ComputerVision Plugin works!
