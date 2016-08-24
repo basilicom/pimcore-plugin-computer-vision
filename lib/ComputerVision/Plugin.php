@@ -24,6 +24,10 @@ class Plugin extends PluginLib\AbstractPlugin implements PluginLib\PluginInterfa
         return 'Plugin successfully installed';
     }
     
+    public static function needsReloadAfterInstall() {
+        return true; 
+    }
+    
     public static function uninstall()
     {
         if (file_exists(self::getConfigName())) {
