@@ -1,7 +1,7 @@
 {
-    "name": "basilicom-pimcore-plugin/ComputerVision",
+    "name": "basilicom-pimcore-plugin/computer-vision",
     "type": "pimcore-plugin",
-    "license": "BSD-3-Clause",
+    "license": "GPLv3",
     "description": "A Pimcore plugin that analyzes images via Computer Vision API (Microsoft Cognitive Services)",
     "keywords":["pimcore", "plugin", "image", "asset", "analyzer", "Computer Vision", "metadata", "face recognition"],
     "homepage": "http://basilicom.de/en/pimcore",
