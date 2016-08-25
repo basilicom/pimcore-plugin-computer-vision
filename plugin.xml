@@ -16,6 +16,8 @@
             <!-- put in the URL for the plugin configuration eg. /plugin/ComputerVision/admin/index -->
             <pluginIframeSrc></pluginIframeSrc>
 
+            <pluginXmlEditorFile>/website/var/config/extension-computervision.xml</pluginXmlEditorFile>
+
             <!-- className of the plugin which extends Pimcore_API_Plugin_Abstract-->
 			<pluginClassName>\ComputerVision\Plugin</pluginClassName>
 
