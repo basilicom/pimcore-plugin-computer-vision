@@ -14,7 +14,8 @@
         }
     ],
     "require": {
-        "pimcore/installer-plugin": ">=1"
+        "pimcore/installer-plugin": ">=1",
+        "guzzlehttp/guzzle": "~6.2"
     },
     "autoload": {
         "psr-4": {
