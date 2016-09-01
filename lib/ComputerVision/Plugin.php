@@ -2,6 +2,7 @@
 
 namespace ComputerVision;
 
+use ComputerVision\Command\AnalyzeCommand;
 use Pimcore\API\Plugin as PluginLib;
 
 class Plugin extends PluginLib\AbstractPlugin implements PluginLib\PluginInterface
@@ -11,6 +12,7 @@ class Plugin extends PluginLib\AbstractPlugin implements PluginLib\PluginInterfa
     public function init()
     {
         parent::init();
+        \Pimcore::getEventManager()->attach('system.console.init', array($this, 'attachConsoleCommand'));
     }
 
     public static function install()
@@ -53,5 +55,16 @@ class Plugin extends PluginLib\AbstractPlugin implements PluginLib\PluginInterfa
         . 'extension-'
         . str_replace('\plugin', '', strtolower(__CLASS__))
         . '.xml';
+    }
+
+    public function attachConsoleCommand($e)
+    {
+        /** @var \Pimcore\Console\Application $application */
+        $application = $e->getTarget();
+        $application->addAutoloadNamespace(
+            'ComputerVision\\Command',
+            PIMCORE_DOCUMENT_ROOT . '/plugins/ComputerVision/lib/ComputerVision/Command'
+        );
+        $application->add(new AnalyzeCommand());
     }
 }

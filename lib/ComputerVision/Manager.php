@@ -14,13 +14,17 @@ use Pimcore\Model\Asset;
 
 class Manager
 {
+    const PROCESSED = 'cv_processed';
+    const PROCESSED_VALUE = 'processed';
+
     private $client;
     private $asset;
     private $type;
+    private $delay = 0;
     private $data;
             
 
-    public function __construct($assetId, $type)
+    public function __construct($assetId, $type, $delay)
     {
         $this->asset = Asset::getById($assetId);
         
@@ -29,6 +33,7 @@ class Manager
         }
         
         $this->type = $type;
+        $this->delay = (int) $delay;
         $this->client = new \ComputerVision\ComputerVisionClient();
     }
 
@@ -72,8 +77,10 @@ class Manager
                 }
             }
 
+            $asset->addMetadata(self::PROCESSED, 'input', self::PROCESSED_VALUE);
             $asset->save();
-            
+
+
         } catch (\Exception $e) {
             throw $e;
         }
@@ -107,8 +114,17 @@ class Manager
     private function processImage(\Pimcore\Model\Asset\Image $asset)
     {
         try {
+            $processed = $asset->getMetadata(self::PROCESSED);
+                        
+            if ($processed == self::PROCESSED_VALUE) {
+                return true;
+            }
+
             $data = $this->client->analyzeImage($asset);
             $this->saveData($asset, $data);
+            sleep($this->delay);
+            
+            return true;
 
         } catch (\Exception $e) {
             throw $e;
