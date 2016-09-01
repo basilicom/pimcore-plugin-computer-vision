@@ -6,7 +6,7 @@
             <pluginName>ComputerVision</pluginName>
 
             <!-- a short description -->
-			<pluginDescription><![CDATA[]]></pluginDescription>
+			<pluginDescription><![CDATA[A Pimcore plugin that analyzes images via Computer Vision API (Microsoft Cognitive Services)]]></pluginDescription>
 
             <!-- meta data -->
             <pluginVersion>1.0</pluginVersion>
