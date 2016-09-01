@@ -9,6 +9,7 @@ This plugin adds a new button 'Computer Vision' in the asset detail view. By cli
 it's a folder - all child assets) gets analyzed by Microsoft Computer Vision API
 (https://www.microsoft.com/cognitive-services/en-us/computer-vision-api) and the result is saved as Asset Metadata.
 
+
 ## Installation
 
 Add the "basilicom-de/pimcore-plugin-computervision" repository to the composer.json in the toplevel directory of your pimcore installation.
