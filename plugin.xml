@@ -38,7 +38,7 @@
 
 			<!-- css files with path relative to plugin-directory -->
 			<pluginCssPaths>
-                <path>/plugins/ComputerVision/static/css/example.css</path>
+                <path>/plugins/ComputerVision/static/css/computervision.css</path>
 			</pluginCssPaths>
 		</plugin>
 </zend-config>

@@ -29,6 +29,8 @@ pimcore.plugin.computervision = Class.create(pimcore.plugin.admin, {
         asset.toolbar.insert(index, {
             text: 'Computer Vision',
             itemId: 'computervision',
+            iconCls: "pimcore_icon_eye",
+            tooltip: 'Analyze asset via Microsoft Computer Vision',
             scale: 'medium',
             handler: function(button) {
                 

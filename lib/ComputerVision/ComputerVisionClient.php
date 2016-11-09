@@ -35,7 +35,6 @@ class ComputerVisionClient
 
     public function analyzeImage(Asset $image)
     {
-
         $uri = $this->url . $this->features . '&subscription-key=' . $this->subscriptionKey;
 
         try {
