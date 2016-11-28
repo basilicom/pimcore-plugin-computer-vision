@@ -24,7 +24,7 @@ class Manager
     private $data;
             
 
-    public function __construct($assetId, $type, $delay)
+    public function __construct($assetId, $type, $delay = 0)
     {
         $this->asset = Asset::getById($assetId);
         

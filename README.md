@@ -10,6 +10,9 @@ This plugin adds a new button 'Computer Vision' in the asset detail view. By cli
 it's a folder - all child assets) gets analyzed by Microsoft Computer Vision API
 (https://www.microsoft.com/cognitive-services/en-us/computer-vision-api) and the result is saved as Asset Metadata.
 
+Please note, that unsaved changes get lost by clicking the Computer Vision button, because the asset tab reloads to 
+display the Computer Vision metadata.
+
 
 ## Installation
 

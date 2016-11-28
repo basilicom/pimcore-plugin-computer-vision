@@ -62,8 +62,8 @@ pimcore.plugin.computervision = Class.create(pimcore.plugin.admin, {
 
                                 window.setTimeout(function(){
                                     var assetPanel = pimcore.globalmanager.get("asset_" + asset.id);
-                                    assetPanel.tabbar.setActiveTab(2);
-                                }, 500);
+                                    assetPanel.tabbar.setActiveTab(3);
+                                }, 700);
                             }
                         }
 
